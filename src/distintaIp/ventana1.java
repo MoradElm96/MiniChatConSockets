@@ -95,7 +95,7 @@ public class ventana1 extends javax.swing.JFrame implements Observer {
         
         this.txtTexto.append(mensaje);
         //lanza el mensaje al servidor
-        Cliente c = new Cliente("localhost", 6000, mensaje);
+        Cliente c = new Cliente("192.168.1.142", 5000, mensaje);
         Thread t = new Thread(c);
         t.start();
                 this.txtTextoEnviar.setText(null);
